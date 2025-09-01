@@ -12,7 +12,7 @@ function HomePage() {
       {/* This custom tag from react-router-dom allows to navigate to the  path added under "/products" 
       without refreshing the page. unlike using <a> tag and adding lnk to href
       */}
-      <Link to={"/products"}>go to products page</Link>
+      <Link to={"products"}>go to products page</Link>
 
       {/* The other way to navigate to different URL is using useNavigate hook. We may encouter such scenarios
        like we want to navigate to the different link based on some time out or  modal close.

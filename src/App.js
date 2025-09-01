@@ -4,15 +4,22 @@ import HomePage from "./Pages/Home";
 import ProductsPage from "./Pages/Products";
 import RootLayout from "./Pages/Root";
 import ErrorPage from "./Pages/Error";
+import ProductDetails from "./Pages/ProductDetails";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/root",
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <HomePage /> },
-      { path: "/products", element: <ProductsPage /> },
+      //removed earlier "/" from the path to convert it to relative path from absolute path
+      // this will first identify the parent "root" and will append the paths defined.
+
+      { index: true, element: <HomePage /> }, //We can replace path with index attribute if the same page
+      // should be loaded when the parent  "/root to be called"
+
+      { path: "products", element: <ProductsPage /> },
+      { path: "products/:productId", element: <ProductDetails /> },
     ],
   },
 ]);

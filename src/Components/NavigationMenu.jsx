@@ -8,7 +8,7 @@ function NavigationMenu() {
         <ul className={navigationCSS.list}>
           <li>
             <NavLink
-              to={"/"}
+              to={""}
               className={({isActive}) => {
                 return isActive ? navigationCSS.active : undefined;
               }}
@@ -18,7 +18,7 @@ function NavigationMenu() {
           </li>
           <li>
             <NavLink
-              to={"/products"}
+              to={"products"}
               className={({isActive}) => {
                 return isActive ? navigationCSS.active : undefined;
               }}
